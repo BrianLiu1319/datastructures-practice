@@ -1,0 +1,164 @@
+1.1 Object Oriented Concepts
+
+Object oriented analysis and design will allow us to solve problems easier
+- it is the process of understanding what the problem is and what the requirements of a solution are.
+
+A solution to a problem is a computer program, the program comprises modules working together
+
+Modules can be a stand alone function or even method
+
+Encapsulation is the technique of hiding finer details (we dont need to know the inner workings of a clock in order to use one)
+
+Inheritance allows us to reuse classes defined earlier and make slight modifications
+
+
+3 principles of OOP :
+
+1. Encapsulation : Objects combine data and operations
+2. Inheritance: Classes can inherit properties
+3. Polymorphism: Objects can determine appropritate operations at execution time
+
+
+---
+1.2 Achieving a Better Solution
+
+We want to be able to analyze what makes a good solution and the the aspect of what makes a good solution good; how do we 
+analyze the problem and get a better solution than others.
+
+Cohesion: Each module of a solution should be able to perform one well-defined task.
+
+- A highly cohesive module brings several benefits to a design.
+
+-- First : Module must be well named, promote self-documenting, easy to understand code
+EX || a module called sort should sort!
+-- Second : a highly cohesive module should be easy to reuse in other software projects
+EX || a module called sort can be used without change, if sort prints out the sorted
+      values, it will be less likely to be reused
+-- Third : Should be easy to maintain
+EX || if sort has a problem, it's probably a simple logical error, because it does nothing but sort
+-- Fourth : Must be ROBUST and less likely to be affected by change
+EX || sort will only require change if we need to sort in a different order or if we need another algorithm
+
+
+Coupling: 
+
+Coupling is the measure of dependence among modules,
+
+less coupling = more reusability and adaptability to change.
+MODULES SHOULD BE LOOSELY COUPLED!!
+
+
+Note :
+
+start getting in the habit of making a modular solution
+
+this will allow us to debug easier and spend less time writing our program
+
+1.3 Specifications
+
+When designing modular solutions,
+
+
+---
+1.3 Specifications
+
+We don't know how modules work, because modules are isolated from each other, but it is essential
+that the specifics of the modules are written and understood
+
+1.3.1 Operation Contracts
+
+Operation Contracts state how a method is used, what it needs and the limitations it has.
+By specifying this contracy, others can easily understand what is needed to generate correct results.
+
+We should provide answers to :
+
+What data is available to module before execution
+What does the module assume
+What actions has taken place after execution
+What does our data looks like after the module executes
+
+basically write the precondition and the post condition
+
+1.3.3 Abstraction
+
+ Abstraction seperates the purpose of a module from the implementation.
+
+ Basically what abstraction does is that it specifies each module clearly before implementation,
+ so we can focus on the macro rather than the micro. It doesn't matter the implementation as long
+ as you get it done.
+
+ Seperating the purpose of a module is known as functional abstraction; we don't need to know how an
+ engine works to know how to drive a car, as long as it works as intended. Once a module is written
+ we can use it without knowing how it works as long as we followw its given preconditions and the
+ postconditions.
+
+ EX || modules such as the std library and cmath, we don't know how 'endl' works but it gives us a 
+       newline everytime
+
+1.3.4 Information Hiding
+
+If abstraction helps us write modules outside public view (not letting people know the implementation), 
+then information hiding tells us how to hide such details so that other modules don't mess with it.
+
+1.3.5 Minimal and Complete Interfaces
+
+The interface for a class is made of publicly accessible methods and data,
+the interface allows programmers to interact with the class.
+
+Complete interface - allows programmers to accomplish and reasonable task, given the responsibilities of that clas
+
+Minimal Interface - Contains a methhod IFF that method is essential to the class's responsibility
+
+Classes with minimal interfaces are easier to maintain, but less features.
+
+---
+1.4 Abstract Data Types (ADT)
+
+Operations on data are typically required such as :
+
+- Adding Data
+- Removing data
+- Ask questions about the data
+
+An ADT is a collection of data and the set of operations on that data. Often we will implement the ADT
+by using a data structure, which is a construct to store a collection of data.
+
+the problem of ADT is being able to choose what particular data structure when implementing the ADT.
+
+EX ||
+
+An example of an ADT is an ice dispenser
+
+Ice dispenser has operations:
+- Chill
+- Crush
+- Cube
+- isEmpty
+
+This is basically an ADT - the ice dispenser has
+
+An input of water, produces an output of chilled water, crushed ice or ice cubes.
+
+We are not concerned with how they do it, but rather concerned that the output is what we want.
+
+How we build the dispenser is the implementation of the ADT and the data structure of how we will
+do it. For example someone might want a faster data structure of faster ice or a bigger data structure
+for more storage of the ice.
+
+The modular design allows us to improve the operations seperately without affecting the other
+operations.
+
+1.5 The ADT Bag
+
+the ADT bag, we dont need to know the entries in the bad how they are represented or implemented, but the
+bag just contains its items.
+
+
+Summary :
+
+
+
+
+
+
+
